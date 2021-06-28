@@ -4,6 +4,7 @@ import android.app.DownloadManager
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.androiddevs.mvvmnewsapp.models.Article
 import com.androiddevs.mvvmnewsapp.models.NewsResponse
 import com.androiddevs.mvvmnewsapp.repository.NewsRepository
 import com.androiddevs.mvvmnewsapp.util.Resource
@@ -22,7 +23,7 @@ class NewsViewModel(
 
     init {
         getBreakingNews(countryCode = "US")
-       // getSearchNews(searchQuery = "corona")
+        // getSearchNews(searchQuery = "corona")
     }
 
     fun getBreakingNews(countryCode: String) = viewModelScope.launch {
@@ -54,5 +55,15 @@ class NewsViewModel(
             }
         }
         return Resource.Error(response.message())
+    }
+
+    fun savedArticle(article: Article) = viewModelScope.launch {
+        newsRepository.upsert(article)
+    }
+
+    fun getSavedNews() = newsRepository.getSavedNews()
+
+    fun deleteArticle(article: Article) = viewModelScope.launch {
+        newsRepository.deleteArticle(article)
     }
 }
