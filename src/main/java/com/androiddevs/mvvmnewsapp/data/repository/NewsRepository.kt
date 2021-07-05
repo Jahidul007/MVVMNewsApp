@@ -1,9 +1,8 @@
-package com.androiddevs.mvvmnewsapp.repository
+package com.androiddevs.mvvmnewsapp.data.repository
 
-import android.app.DownloadManager
-import com.androiddevs.mvvmnewsapp.api.RetrofitInstance
-import com.androiddevs.mvvmnewsapp.db.ArticleDatabase
-import com.androiddevs.mvvmnewsapp.models.Article
+import com.androiddevs.mvvmnewsapp.data.api.RetrofitInstance
+import com.androiddevs.mvvmnewsapp.data.db.ArticleDatabase
+import com.androiddevs.mvvmnewsapp.data.model.Article
 
 class NewsRepository(val db: ArticleDatabase) {
     suspend fun getBreakingNews(countryCode:String, pageNumber: Int) =

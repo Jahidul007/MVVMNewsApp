@@ -1,23 +1,19 @@
-package com.androiddevs.mvvmnewsapp.ui
+package com.androiddevs.mvvmnewsapp.ui.main.viewmodel
 
 import android.app.Application
-import android.app.DownloadManager
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.ConnectivityManager.*
 import android.net.NetworkCapabilities.*
 import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.androiddevs.mvvmnewsapp.NewsApplication
-import com.androiddevs.mvvmnewsapp.models.Article
-import com.androiddevs.mvvmnewsapp.models.NewsResponse
-import com.androiddevs.mvvmnewsapp.repository.NewsRepository
+import com.androiddevs.mvvmnewsapp.data.model.Article
+import com.androiddevs.mvvmnewsapp.data.model.NewsResponse
+import com.androiddevs.mvvmnewsapp.data.repository.NewsRepository
 import com.androiddevs.mvvmnewsapp.util.Resource
-import com.bumptech.glide.load.ResourceEncoder
 import kotlinx.coroutines.launch
 import retrofit2.Response
 import java.io.IOException

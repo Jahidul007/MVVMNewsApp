@@ -1,4 +1,4 @@
-package com.androiddevs.mvvmnewsapp.ui.fragments
+package com.androiddevs.mvvmnewsapp.ui.main.view.savedNews
 
 import android.os.Bundle
 import android.view.View
@@ -9,11 +9,10 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.androiddevs.mvvmnewsapp.R
-import com.androiddevs.mvvmnewsapp.adapter.NewsAdapter
-import com.androiddevs.mvvmnewsapp.ui.NewsActivity
-import com.androiddevs.mvvmnewsapp.ui.NewsViewModel
+import com.androiddevs.mvvmnewsapp.ui.main.adapter.NewsAdapter
+import com.androiddevs.mvvmnewsapp.ui.main.NewsActivity
+import com.androiddevs.mvvmnewsapp.ui.main.viewmodel.NewsViewModel
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.fragment_breaking_news.*
 import kotlinx.android.synthetic.main.fragment_saved_news.*
 
 class SavedNewsFragment : Fragment(R.layout.fragment_saved_news) {

@@ -1,4 +1,4 @@
-package com.androiddevs.mvvmnewsapp.models
+package com.androiddevs.mvvmnewsapp.data.model
 
 
 import com.google.gson.annotations.SerializedName

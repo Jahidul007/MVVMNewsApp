@@ -1,7 +1,6 @@
-package com.androiddevs.mvvmnewsapp.ui.fragments
+package com.androiddevs.mvvmnewsapp.ui.main.view.breakingNews
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.AbsListView
 import android.widget.Toast
@@ -11,9 +10,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.androiddevs.mvvmnewsapp.R
-import com.androiddevs.mvvmnewsapp.adapter.NewsAdapter
-import com.androiddevs.mvvmnewsapp.ui.NewsActivity
-import com.androiddevs.mvvmnewsapp.ui.NewsViewModel
+import com.androiddevs.mvvmnewsapp.ui.main.adapter.NewsAdapter
+import com.androiddevs.mvvmnewsapp.ui.main.NewsActivity
+import com.androiddevs.mvvmnewsapp.ui.main.viewmodel.NewsViewModel
 import com.androiddevs.mvvmnewsapp.util.Constants.Companion.QUERY_PAGE_SIZE
 import com.androiddevs.mvvmnewsapp.util.Resource
 import kotlinx.android.synthetic.main.fragment_breaking_news.*
